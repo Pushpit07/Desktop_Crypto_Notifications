@@ -3,8 +3,17 @@
 	<head>
 		<meta charset="UTF-8" />
 		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
-		<meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="
+			default-src 'self' https://fonts.googleapis.com; 
+			style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;
+			connect-src 'self' https://min-api.cryptocompare.com;"
+		/>
+		<meta
+			http-equiv="X-Content-Security-Policy"
+			content="default-src 'self'; style-src 'self'; script-src 'self'"
+		/>
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<title>Hello World!</title>
 	</head>
